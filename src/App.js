@@ -5,20 +5,21 @@ const App = () => {
   const dolar = useRef();
 
   const convert = () => {
-    dolar.current.innerHTML = euro.current.value * 2;
+    return (dolar.current.innerHTML = euro.current.value * 2);
   };
 
   return (
     <div>
+      <h2>Calculadora de Euro a Dolar</h2>
       <label>
         euro:<input type="text" ref={euro}></input>
       </label>
+      <button onClick={convert}>Enviar</button>
       <div>
-        <botton onClick={convert}>Enviar</botton>
+        <label>
+          dolar:<div ref={dolar}></div>
+        </label>
       </div>
-      <label>
-        dolar:<div ref={dolar}></div>
-      </label>
     </div>
   );
 };
