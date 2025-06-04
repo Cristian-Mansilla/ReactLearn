@@ -1,20 +1,26 @@
 import { useRef } from "react";
 
 const App = () => {
+  const euro = useRef();
+  const dolar = useRef();
 
-  const nombreRef = useRef();
-  const resultadoRef = useRef();
+  const convert = () => {
+    dolar.current.innerHTML = euro.current.value * 2;
+  };
 
-  const procesar = () => {
-    resultadoRef.current.innerHTML = nombreRef.current.value;
-  }
-
-  return <div>
-    <input type="text" ref={nombreRef}></input>
-    <botton onClick={procesar}>Enviar</botton>
-    <div ref={resultadoRef}></div>
-  </div>
-
+  return (
+    <div>
+      <label>
+        euro:<input type="text" ref={euro}></input>
+      </label>
+      <div>
+        <botton onClick={convert}>Enviar</botton>
+      </div>
+      <label>
+        dolar:<div ref={dolar}></div>
+      </label>
+    </div>
+  );
 };
 
 // const App = () => {
