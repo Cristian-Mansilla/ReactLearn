@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import Termostato from './Termostato';
 import Superficie from './SupTriangulo';
+import Estados from './Estados';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -10,6 +11,7 @@ root.render(
     <App />
     <Termostato/>
     <Superficie />
+    <Estados />
   </React.StrictMode>
 );
 
