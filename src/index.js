@@ -5,6 +5,7 @@ import Termostato from './Termostato';
 import Superficie from './SupTriangulo';
 import Estados from './Estados';
 import Dolar from './Dolar';
+import ChangeImage from './Imagen';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +15,7 @@ root.render(
     <Dolar />
     <Superficie />
     <Estados />
+    <ChangeImage />
   </React.StrictMode>
 );
 
