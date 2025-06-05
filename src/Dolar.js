@@ -14,7 +14,7 @@ const Dolar = () => {
       <div>
         <h2>Calculadora de Euro a Dolar</h2>
         <label>
-          euro:<input type="text" ref={euro}></input>
+          euro:<input onChange={(e)=>{setDolar(e.target.value*2)}} type="text" ref={euro}></input>
         </label>
         <button onClick={convert}>Enviar</button>
         <div>
