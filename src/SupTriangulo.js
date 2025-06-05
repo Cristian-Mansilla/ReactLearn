@@ -1,12 +1,14 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const Superficie = () => {
   const ancho = useRef();
   const alto = useRef();
-  const superficie = useRef();
+  // const superficie = useRef();
+  const [superficie, setSuperficie] = useState();
   const calcularSuperficie = () => {
-    superficie.current.innerHTML = ancho.current.value * alto.current.value;
-    return superficie;
+    const superficie = ancho.current.value * alto.current.value;
+    // superficie.current.innerHTML = superficie;
+    setSuperficie(superficie);
   };
 
   return (
@@ -15,7 +17,8 @@ const Superficie = () => {
       <input ref={ancho}></input>
       <input ref={alto}></input>
       <button onClick={calcularSuperficie}>Calcular superficie</button>
-      <div ref={superficie}></div>
+      {/* <div ref={superficie}></div> */}
+      <div>{superficie}</div>
     </>
   );
 };
