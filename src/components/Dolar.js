@@ -14,9 +14,9 @@ const Dolar = () => {
       <div>
         <h2>Calculadora de Euro a Dolar</h2>
         <label>
-          euro:<input onChange={(e)=>{setDolar(e.target.value*2)}} type="text" ref={euro}></input>
+          euro:<input onChange={(euro)=>{setDolar(euro.target.value*2)}} type="text" /*</label>ref={euro}*/></input>
         </label>
-        <button onClick={convert}>Enviar</button>
+        <button disabled='true' onClick={convert}>Enviar</button>
         <div>
           <label>
             {/* dolar:<div ref={dolar}></div> */}

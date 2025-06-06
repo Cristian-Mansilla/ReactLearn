@@ -14,9 +14,9 @@ const Superficie = () => {
   return (
     <>
       <h2>Calcular Superfice Triangulo</h2>
-      <input ref={ancho}></input>
-      <input ref={alto}></input>
-      <button onClick={calcularSuperficie}>Calcular superficie</button>
+      <input onChange={ancho => {setSuperficie(ancho.target.value)}} /*ref={ancho}*/></input>
+      <input onChange={alto => {setSuperficie(alto.target.value)}}/*ref={alto}*/></input>
+      <button disabled='true' onClick={calcularSuperficie}>Calcular superficie</button>
       {/* <div ref={superficie}></div> */}
       <div>{superficie}</div>
     </>

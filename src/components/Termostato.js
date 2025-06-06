@@ -14,8 +14,8 @@ const Termostato = () => {
 
     return <>
     <h2>Calculadora de Calsius a Fahrenheit</h2>
-    <input ref={celsius}></input>
-    <button onClick={convert}>Convertir</button>
+    <input onChange={celsius=>{setFahrenheit(celsius.target.value*9/5+32)}}/*ref={celsius}*/></input>
+    <button disabled='true' onClick={convert}>Convertir</button>
     {/* <div ref={fahrenheit}></div> */}
     <div>{fahrenheit}</div>
     </>
