@@ -10,7 +10,7 @@
 const Box = ({ onSomeEvent,title}) => {
   return (
     <>
-      <button onClick={() => onSomeEvent()}>Click on me!</button>
+      <button onClick={() => onSomeEvent(title)}>Click on me!</button>
     </>
   );
 };

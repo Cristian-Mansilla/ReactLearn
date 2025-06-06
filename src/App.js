@@ -4,6 +4,7 @@ import Superficie from "./components/SupTriangulo";
 import Termostato from "./components/Termostato";
 import Estados from "./components/Estados";
 import Box from "./components/Box";
+import Post from "./components/Post";
 
 const App = () => {
   const titulo = <h1>Aprendiendo React</h1>;
@@ -30,6 +31,8 @@ const App = () => {
         <Superficie />
         <Estados />
         <ChangeImage />
+        <Post title='Un titulo random' author='nombre random'>Lorem ipsum</Post>
+        <Post title='Viaje a la luna' author='Julio Verne'>Viajando a la luna</Post>
       </div>
     </>
   );
