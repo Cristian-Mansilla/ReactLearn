@@ -11,6 +11,7 @@ const App = () => {
     alert("Saluda React");
   };
   const array = [1, 2, 3, 4, 5];
+  const changePather = (param) => { alert(param) };
   return (
     <>
       <div>{titulo}</div>
@@ -23,7 +24,7 @@ const App = () => {
         <button onClick={btnAlert}>Presioname</button>
       </div>
       <div>
-        <Box>Hola componente Box!</Box>
+        <Box title='hola componente box' onSomeEvent={changePather}>Hola componente Box!</Box>
         <Termostato />
         <Dolar />
         <Superficie />
