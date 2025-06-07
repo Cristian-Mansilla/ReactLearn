@@ -1,15 +1,16 @@
-import Temp from "./components/Temp";
 import { useState } from "react";
-
+import Area from "./components/Area";
 const App = () => {
   const titulo = <h1>Aprendiendo React</h1>;
   const btnAlert = () => {
     alert("Saluda React");
   };
- 
-  const [celsius, setCelsius] = useState(0);
-  const celsiusToFahrenheit = (e) => { setCelsius(e.target.value) }
-  const fahrenheit = celsius * 9/5+32;
+
+  const [alto, setAlto] = useState(0);
+  const [ancho, setAncho] = useState(0);
+  const handleAlto = (e) => { setAlto(e.target.value) }
+  const handleAncho = (e) => { setAncho(e.target.value) }
+  const superficie = alto * ancho;
 
   return (
     <>
@@ -17,10 +18,11 @@ const App = () => {
       <div>
         <button onClick={btnAlert}>Presioname</button>
       </div>
-      
+
       <div>
-        <input placeholder="Ingrese grados celsius" onChange={celsiusToFahrenheit}></input>
-        <Temp fahrenheit={fahrenheit}/>
+        <input placeholder="Alto" onChange={handleAlto}></input>
+        <input placeholder="Ancho" onChange={handleAncho}></input>
+        <Area superficie={superficie}></Area>
       </div>
     </>
   );
