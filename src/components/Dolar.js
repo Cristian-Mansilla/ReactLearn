@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-const Dolar = () => {
+const Dolar = ({onSomeEvent}) => {
     const euro = useRef();
     const [dolar, setDolar] = useState(0);
     // const dolar = useRef();
