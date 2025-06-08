@@ -8,8 +8,7 @@ const App = () => {
     alert("Saluda React");
   };
 
-  const [dato1, setDato1] = useState();
-  const [dato2, setDato2] = useState();
+  const [noches, setNoches] = useState();
 
   return (
     <>
@@ -19,11 +18,9 @@ const App = () => {
       </div>
 
       <div>
-        <input onChange={(e)=>setDato1(e.target.value)}></input>
-        <input onChange={(e)=>setDato2(e.target.value)}></input>
-        <ComponenteMultiple option={1} dato1={dato1}/>
-        <ComponenteMultiple option={2} dato1={dato1}/>
-        <ComponenteMultiple option={3} dato1={dato1} dato2={dato2}/>
+        <input onChange={(e)=>setNoches(e.target.value)}></input>
+        <ComponenteMultiple option={1} noches={noches}/>
+        <ComponenteMultiple option={2} noches={noches}/>
       </div>
     </>
   );
