@@ -1,16 +1,15 @@
 import { useState } from "react";
-import Area from "./components/Area";
+import RenderizadoCondicional from "./components/RederizadoCondicional";
+import ComponenteMultiple from "./components/ComponenteMultiple";
+
 const App = () => {
   const titulo = <h1>Aprendiendo React</h1>;
   const btnAlert = () => {
     alert("Saluda React");
   };
 
-  const [alto, setAlto] = useState(0);
-  const [ancho, setAncho] = useState(0);
-  const handleAlto = (e) => { setAlto(e.target.value) }
-  const handleAncho = (e) => { setAncho(e.target.value) }
-  const superficie = alto * ancho;
+  const [dato1, setDato1] = useState();
+  const [dato2, setDato2] = useState();
 
   return (
     <>
@@ -20,9 +19,11 @@ const App = () => {
       </div>
 
       <div>
-        <input placeholder="Alto" onChange={handleAlto}></input>
-        <input placeholder="Ancho" onChange={handleAncho}></input>
-        <Area superficie={superficie}></Area>
+        <input onChange={(e)=>setDato1(e.target.value)}></input>
+        <input onChange={(e)=>setDato2(e.target.value)}></input>
+        <ComponenteMultiple option={1} dato1={dato1}/>
+        <ComponenteMultiple option={2} dato1={dato1}/>
+        <ComponenteMultiple option={3} dato1={dato1} dato2={dato2}/>
       </div>
     </>
   );
