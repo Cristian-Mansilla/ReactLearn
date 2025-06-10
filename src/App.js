@@ -1,14 +1,9 @@
-import { useState } from "react";
-import RenderizadoCondicional from "./components/RederizadoCondicional";
-import ComponenteMultiple from "./components/ComponenteMultiple";
-
+import  data  from "./data/data.json";
 const App = () => {
   const titulo = <h1>Aprendiendo React</h1>;
   const btnAlert = () => {
     alert("Saluda React");
   };
-
-  const [noches, setNoches] = useState();
 
   return (
     <>
@@ -18,9 +13,9 @@ const App = () => {
       </div>
 
       <div>
-        <input onChange={(e)=>setNoches(e.target.value)}></input>
-        <ComponenteMultiple option={1} noches={noches}/>
-        <ComponenteMultiple option={2} noches={noches}/>
+        {data.map((element,key) => {
+          return <p key={key}>{element.name}</p>
+        })}
       </div>
     </>
   );

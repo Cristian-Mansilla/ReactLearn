@@ -1,3 +1,14 @@
+/**
+ * const [noches, setNoches] = useState();
+ * 
+ * <div>
+        <input onChange={(e)=>setNoches(e.target.value)}></input>
+        <ComponenteMultiple option={1} noches={noches}/>
+        <ComponenteMultiple option={2} noches={noches}/>
+  </div>
+ *  
+ */
+
 const ComponenteMultiple = ({ option, noches }) => {
   //   switch (option) {
   //     case 1:
