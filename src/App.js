@@ -1,22 +1,29 @@
+import "./styles/App.css";
 import  data  from "./data/data.json";
+import Dollars from "./components/Dollars";
 const App = () => {
-  const titulo = <h1>Aprendiendo React</h1>;
+  const titulo = <h1 style={{fontSize:"2.5em"}}>Aprendiendo React</h1>;
   const btnAlert = () => {
     alert("Saluda React");
   };
 
   return (
     <>
-      <div>{titulo}</div>
+      <div className='title'>{titulo}</div>
       <div>
         <button onClick={btnAlert}>Presioname</button>
       </div>
 
       <div>
-        {data.map((element,key) => {
+        {data.filter(element => element.edad > 24).map((element,key) => {
           return <p key={key}>{element.name}</p>
         })}
       </div>
+
+      <div>
+        <Dollars></Dollars>
+      </div>
+
     </>
   );
 };

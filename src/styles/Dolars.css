@@ -1,0 +1,13 @@
+.box {
+    margin: 5px;
+    padding: 20px;
+    background-color: #282c34;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
