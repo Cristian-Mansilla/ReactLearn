@@ -1,5 +1,6 @@
 import "./styles/App.css";
 import  data  from "./data/data.json";
+import { Box } from "./styles/styled";
 import Dollars from "./components/Dollars";
 const App = () => {
   const titulo = <h1 style={{fontSize:"2.5em"}}>Aprendiendo React</h1>;
@@ -20,9 +21,9 @@ const App = () => {
         })}
       </div>
 
-      <div>
+      <Box>
         <Dollars></Dollars>
-      </div>
+      </Box>
 
     </>
   );

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../styles/Dolars.css";
+// import "../styles/Dolars.css";
 
 const Dollars = ({ amount }) => {
   const [euro, setEuro] = useState(0);
@@ -9,7 +9,7 @@ const Dollars = ({ amount }) => {
   const dollars = euro * 2;
 
   return (
-    <div className="box">
+    <div>
       <div>
         <input placeholder="Euro" onChange={handlerDollar}></input>
         {/* <Dollars amount={dollars} /> */}
