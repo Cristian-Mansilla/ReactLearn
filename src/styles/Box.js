@@ -6,10 +6,10 @@ export const Box = styled.div`
     padding: 10px;
     margin: 20px;
     border-radius: 5px;
-    background-color: pink;
     color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: ${({ isRight }) => isRight ? 'green':'red'};
 `;
