@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Box = styled.div`
     width: 200px;
@@ -11,5 +11,11 @@ export const Box = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: ${({ isRight }) => isRight ? 'green':'red'};
+    ${({ isRight }) => isRight ? 
+    css`
+    background-color:green;` 
+    :
+    css`
+    background-color:red;
+    `};
 `;

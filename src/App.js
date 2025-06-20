@@ -4,6 +4,7 @@ import { Box } from "./styles/Box.js";
 import { Hover } from "./styles/Hover.js";
 import Dollars from "./components/Dollars";
 import { Input } from "./styles/Input.js";
+import { BlueText, RedText } from "./styles/Reutilizable.js";
 const App = () => {
   const titulo = <h1 style={{ fontSize: "2.5em" }}>Aprendiendo React</h1>;
   const btnAlert = () => {
@@ -21,15 +22,21 @@ const App = () => {
         {data
           .filter((element) => element.edad > 24)
           .map((element, key) => {
-            return <p key={key}>{element.name}</p>;
+            return (
+              <>
+                <p key={key}>{element.name}</p>
+                <BlueText>Hola</BlueText>
+                <RedText>Chao</RedText>
+              </>
+            );
           })}
       </div>
 
       <Box isRight={true}>
-          <Hover>
-            <Input myMaxLength={2}></Input>
-            <Dollars></Dollars>
-          </Hover>
+        <Hover>
+          <Input myMaxLength={5}></Input>
+          <Dollars></Dollars>
+        </Hover>
       </Box>
     </>
   );
