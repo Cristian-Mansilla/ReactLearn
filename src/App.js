@@ -1,10 +1,11 @@
-import "./styles/App.css";
+// import "./styles/App.css";
 import data from "./data/data.json";
 import { Box } from "./styles/Box.js";
 import { Hover } from "./styles/Hover.js";
 import Dollars from "./components/Dollars";
 import { Input } from "./styles/Input.js";
 import { BlueText, RedText } from "./styles/Reutilizable.js";
+import { GlobalStyle } from "./styles/GlobalStyle.js";
 const App = () => {
   const titulo = <h1 style={{ fontSize: "2.5em" }}>Aprendiendo React</h1>;
   const btnAlert = () => {
@@ -12,7 +13,8 @@ const App = () => {
   };
 
   return (
-    <>
+    <>  
+    <GlobalStyle/>  
       <div className="title">{titulo}</div>
       <div>
         <button onClick={btnAlert}>Presioname</button>
