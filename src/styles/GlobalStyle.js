@@ -5,6 +5,9 @@ export const GlobalStyle = createGlobalStyle`
         background-color: rgb(24, 21, 49);
         color: rgb(255, 237, 214);
     }
+    p {
+        font-size: 2rem;
+    }
     .title{
     color: red;
     text-align: center;
