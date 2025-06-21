@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { desktop, mobile } from './Responsive';
 
 export const Box = styled.div`
     width: 200px;
@@ -18,4 +19,7 @@ export const Box = styled.div`
     css`
     background-color:red;
     `};
+    ${desktop} {
+        width: 100%;
+    };
 `;
