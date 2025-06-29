@@ -2,8 +2,8 @@ import styled, { css } from 'styled-components';
 import { desktop, mobile } from './Responsive';
 
 export const Box = styled.div`
-    width: 200px;
-    height: 100px;
+    width: fit-content;
+    height: fit-content;
     padding: 10px;
     margin: 20px;
     border-radius: 5px;

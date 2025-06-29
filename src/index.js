@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import Speech from './Speech';
 import { UseEffect } from "./useEffect";
+import RutinasDeportivas from "./RutinasDeportivas";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -10,6 +11,7 @@ root.render(
       {/* <App /> */}
       {/* <Speech/> */}
       <UseEffect/>
+      <RutinasDeportivas/>
   </React.StrictMode>
 );
 
