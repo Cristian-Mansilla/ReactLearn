@@ -19,3 +19,11 @@ export const Grid2 = styled.div`
         width: 70%;
     };
 `;
+
+export const Img = styled.img`
+    width: 100%;
+    border-radius: 50px;
+    ${({active}) => active ?
+    'border: 4px solid magenta; z-index: 1' :
+    'border: 4px solid transparent'}
+`;
