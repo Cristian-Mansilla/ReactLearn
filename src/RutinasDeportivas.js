@@ -37,7 +37,6 @@ const RutinasDeportivas = () => {
 
   return (
     <Box>
-      <h1>{workout.title}</h1>
       <Grid2>
         <div>
           <h3>Realizando...</h3>
@@ -67,8 +66,9 @@ const RutinasDeportivas = () => {
           ))}
         </Row>
       </Grid2>
-      <div>
+      <div style={{display:"flex", alignItems:"center"}}>
         <BtnLeft onClick={prevRoutine}></BtnLeft>
+        <h1>{workout.title}</h1>
         <BtnRigth onClick={nextRoutine}></BtnRigth>
       </div>
     </Box>

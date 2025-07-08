@@ -46,5 +46,4 @@ export const BtnLeft = styled.span`
 export const BtnRigth = styled.span`
   ${Btn};
   transform: rotate(180deg) translateY(-1.2px);
-  
 `;
