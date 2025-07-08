@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import routine from "./data/routines.js";
 import { Btn } from "./styles/Btn.js";
 import { Box } from "./styles/Box.js";
-import { Row, Grid2, Img } from "./styles/styled.js";
+import { Row, Grid2, Img, BtnLeft, BtnRigth } from "./styles/styled.js";
 const RutinasDeportivas = () => {
   const [currentWorkout, setWorkout] = useState(0);
   const [currentExercise, setExercise] = useState(0);
@@ -14,7 +14,7 @@ const RutinasDeportivas = () => {
     if (currentWorkout !== 0) setWorkout(currentWorkout - 1);
   };
 
-  // CRONOMETRO DE EJERCICIO
+  // CRONOMETRO DE EJERCICIO (CARRUSEL DE IMAGENES!)
   const timerTime = 30;
   const [counter, setCounter] = useState(timerTime);
   const [clockWorking, setClockworking] = useState(false);
@@ -23,7 +23,7 @@ const RutinasDeportivas = () => {
       if (counter > 0) {
         setTimeout(() => setCounter(counter - 1), 1000);
       } else if (currentExercise < workout.routine.length - 1) {
-        setTimeout(() => setCounter(timerTime), 1000);
+        setCounter(timerTime);
         setExercise(currentExercise + 1);
       } else {
         setClockworking(false);
@@ -46,7 +46,9 @@ const RutinasDeportivas = () => {
             alt="Not found"
           ></img>
           <div>
-            <Btn onClick={() => setClockworking(!clockWorking)}>Start</Btn>
+            <Btn onClick={() => setClockworking(!clockWorking)}>
+              {!clockWorking ? "Start" : "Stop"}
+            </Btn>
             <p>Tiempo: {counter}</p>
           </div>
         </div>
@@ -65,8 +67,10 @@ const RutinasDeportivas = () => {
           ))}
         </Row>
       </Grid2>
-      <Btn onClick={nextRoutine}>Next</Btn>
-      <Btn onClick={prevRoutine}>Prev</Btn>
+      <div>
+        <BtnLeft onClick={prevRoutine}></BtnLeft>
+        <BtnRigth onClick={nextRoutine}></BtnRigth>
+      </div>
     </Box>
   );
 };
